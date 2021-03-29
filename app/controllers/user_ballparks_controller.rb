@@ -1,0 +1,2 @@
+class UserBallparksController < ApplicationController
+end
