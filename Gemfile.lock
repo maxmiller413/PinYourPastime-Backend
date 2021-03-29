@@ -144,6 +144,7 @@ GEM
     websocket-driver (0.7.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    wikipedia-client (1.10.0)
     zeitwerk (2.4.2)
 
 PLATFORMS
@@ -161,6 +162,7 @@ DEPENDENCIES
   spring
   sqlite3 (~> 1.4)
   tzinfo-data
+  wikipedia-client (~> 1.10)
 
 RUBY VERSION
    ruby 2.6.1p33
