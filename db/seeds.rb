@@ -80,17 +80,17 @@ yankeeStadium = Ballpark.create(name: "Yankee Stadium" , location: "Bronx, New Y
 
 
 
-Ballpark.all.each do |ballpark|
-    wiki_loc = Wikipedia.find(ballpark.name)
-    # wiki_team = Wikipedia.find(ballpark.team)
-    # wiki_year = Wikipedia.find(ballpark.opened)
-    # wiki_cap = Wikipedia.find(ballpark.capacity)
-    # wiki_nickname = Wikipedia.find(ballpark.nickname)
-    # wiki_image = Wikipedia.find(ballpark.image)
+# Ballpark.all.each do |ballpark|
+#     wiki_loc = Wikipedia.find(ballpark.name)
+#     # wiki_team = Wikipedia.find(ballpark.team)
+#     # wiki_year = Wikipedia.find(ballpark.opened)
+#     # wiki_cap = Wikipedia.find(ballpark.capacity)
+#     # wiki_nickname = Wikipedia.find(ballpark.nickname)
+#     # wiki_image = Wikipedia.find(ballpark.image)
 
-    # ballpark.update(home_team: wiki_loc.team, year_opened: wiki_loc.year, capacity: wiki_loc.capacity, nickname: wiki_loc.nickname, image: wiki_loc.image)
-    ballpark.update(name: wiki_loc.summary)
-end 
+#     # ballpark.update(home_team: wiki_loc.team, year_opened: wiki_loc.year, capacity: wiki_loc.capacity, nickname: wiki_loc.nickname, image: wiki_loc.image)
+#     ballpark.update(name: wiki_loc.summary)
+# end 
 
 
 user_ballpark_1 = UserBallpark.create(user_id: doug.id, ballpark: citiField, overall_experience: 1, concession_rating: 1, beauty_rating: 1, overall_price_rating: 1, crowd_rating: 1, comments: nil, visited: false, wishlist: false)
