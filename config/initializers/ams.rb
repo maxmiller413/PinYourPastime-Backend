@@ -1,1 +1,0 @@
-FastJsonapi.config.default_includes = '**'

@@ -1,4 +1,3 @@
-class BallparkSerializer
-  include FastJsonapi::ObjectSerializer
+class BallparkSerializer < ActiveModel::Serializer
   attributes :id
 end
