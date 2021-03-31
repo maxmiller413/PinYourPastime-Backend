@@ -20,9 +20,10 @@ class UsersController < ApplicationController
     end 
 
     def login
-        @user = User.find_by(params[:name])
-        
-
+        @user = User.find_by(name: params[:name])
+        # @user_ballparks = @user.user_ballparks
+        render json: @user
+       
     end
 
     # def delete

@@ -14,9 +14,9 @@ UserBallpark.reset_pk_sequence
 User.reset_pk_sequence
 Ballpark.reset_pk_sequence
 
-doug = User.create(name: 'doug', favorite_team: 'mets')
+doug = User.create(name: 'Doug', favorite_team: 'NY Mets')
 
-max = User.create(name: 'max', favorite_team: 'yankees')
+max = User.create(name: 'Max', favorite_team: 'NY Yankees')
 
 americanFamilyField = Ballpark.create(name: "American Family Field" ,location: "Milwaukee, Wisconsin", home_team: "Milwaukee Brewers", year_opened:"2001", capacity:"41,900", nickname: nil, image:"https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/MillerPark2.jpg/240px-MillerPark2.jpg")
 
@@ -93,9 +93,15 @@ yankeeStadium = Ballpark.create(name: "Yankee Stadium" , location: "Bronx, New Y
 # end 
 
 
-user_ballpark_1 = UserBallpark.create(user_id: doug.id, ballpark: citiField, overall_experience: 1, concession_rating: 1, beauty_rating: 1, overall_price_rating: 1, crowd_rating: 1, comments: nil, visited: false, wishlist: false)
 
-user_ballpark_2 = UserBallpark.create(user_id: max.id, ballpark: yankeeStadium, overall_experience: 2, concession_rating: 2, beauty_rating: 2, overall_price_rating: 2, crowd_rating: 2, comments: nil, visited: false, wishlist: false)
+Ballpark.all.each do |ballpark| 
+    UserBallpark.create(user_id: doug.id, ballpark_id: ballpark.id, overall_experience: 0, concession_rating: 0, beauty_rating: 0, overall_price_rating: 0, crowd_rating: 0, comments: nil, visited: true, wishlist: false)
+
+end
+Ballpark.all.each do |ballpark| 
+    UserBallpark.create(user_id: max.id, ballpark_id: ballpark.id, overall_experience: 0, concession_rating: 0, beauty_rating: 0, overall_price_rating: 0, crowd_rating: 0, comments: nil, visited: false, wishlist: true)
+end
+
 
 
 puts '***** SEEDED *****'
