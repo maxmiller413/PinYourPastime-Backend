@@ -14,7 +14,6 @@ class UsersController < ApplicationController
         @user = User.create(user_params)
         Ballpark.all.each do |ballpark| 
             UserBallpark.create(user_id: @user.id, ballpark_id: ballpark.id, overall_experience: 0, concession_rating: 0, beauty_rating: 0, overall_price_rating: 0, crowd_rating: 0, comments: nil, visited: false, wishlist: false)
-
         end
         render json: @user
     end 
