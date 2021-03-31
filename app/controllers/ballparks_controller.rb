@@ -9,6 +9,7 @@ class BallparksController < ApplicationController
         @ballpark = Ballpark.find(params[:id])
         render json: @ballpark
     end 
-    
+
+
 
 end

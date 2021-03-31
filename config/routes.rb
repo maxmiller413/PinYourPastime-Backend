@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   # get '/users/:id', to: "users#show"
   post '/users', to: 'users#create'
   get '/users/:name', to: "users#login"
+  get '/ballparks/:id', to: "ballparks#show"
   
 
 end
