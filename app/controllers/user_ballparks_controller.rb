@@ -15,6 +15,7 @@ class UserBallparksController < ApplicationController
             comments: params[:comments],
             visited: params[:visited],
             wishlist: params[:wishlist])
+            render json: @user_ballpark
         end 
 
 
