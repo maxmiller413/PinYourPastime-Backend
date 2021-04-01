@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     def create
         @user = User.create(user_params)
         Ballpark.all.each do |ballpark| 
-            UserBallpark.create(user_id: @user.id, ballpark_id: ballpark.id, overall_experience: 0, concession_rating: 0, beauty_rating: 0, overall_price_rating: 0, crowd_rating: 0, comments: "You have not rated this ballpark yet!!! Ratings start at 0", visited: false, wishlist: false)
+            UserBallpark.create(user_id: @user.id, ballpark_id: ballpark.id, overall_experience: 0, concession_rating: 0, beauty_rating: 0, overall_price_rating: 0, crowd_rating: 0, comments: "You have not rated #{ballpark.name} yet!!! Ratings start at 0", visited: false, wishlist: false)
         end
         render json: @user
     end 
