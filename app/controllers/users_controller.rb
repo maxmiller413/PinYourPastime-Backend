@@ -22,16 +22,15 @@ class UsersController < ApplicationController
         @user = User.find_by(name: params[:name])
         # @user_ballparks = @user.user_ballparks
         render json: @user
-       
     end
 
+    def edit_favorite
+        @user = User.find_by(name: params[:name])
+        @user.update(favorite_team: params[:favorite_team])
+        render json: @user
+    end
 
-    # def delete
-    #     @user = User.destroy
-    #     @user.remove()
-    #     render json: @user
-    # end 
-
+    
     private
     def user_params
         params.permit(:name, :favorite_team)
