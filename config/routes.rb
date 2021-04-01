@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   
   get '/ballparks/:id', to: "ballparks#show"
   get '/user_ballparks', to: "user_ballparks#index"
+  get '/user_ballparks/:id', to: "user_ballparks#visit"
   patch '/user_ballparks/:id', to: 'user_ballparks#update'
   
 

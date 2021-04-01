@@ -5,6 +5,12 @@ class UserBallparksController < ApplicationController
         render json: @user_ballparks
     end
 
+    def visit
+        @user_ballpark = UserBallpark.find_by(id: params[:id])
+        # byebug
+        render json: @user_ballpark
+    end 
+
     def update 
         @user_ballpark = UserBallpark.find_by(id: params[:id])
         @user_ballpark.update(overall_experience: params[:overall_experience],
