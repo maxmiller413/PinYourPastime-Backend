@@ -2,6 +2,17 @@ class User < ApplicationRecord
 
     has_many :user_ballparks, dependent: :destroy
     has_many :ballparks, through: :user_ballparks 
+
+    # validates :name, uniqueness: true
+
+    # validates :name,
+    # uniqueness: {
+    #   object = @user
+    #   data = { model: "User", attribute: "name", value: <name> }
+    #   message: ->(object, data) do
+    #     "Hey #{object.name}, #{data[:value]} is already taken."
+    #   end
+    # }
     
 
     def wish_lists
