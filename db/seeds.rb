@@ -95,11 +95,11 @@ yankeeStadium = Ballpark.create(name: "Yankee Stadium" , location: "Bronx, New Y
 
 
 Ballpark.all.each do |ballpark| 
-    UserBallpark.create(user_id: doug.id, ballpark_id: ballpark.id, overall_experience: 0, concession_rating: 0, beauty_rating: 0, overall_price_rating: 0, crowd_rating: 0, comments: "You have not rated #{ballpark.name} yet!! Get moving!", visited: true, wishlist: false)
+    UserBallpark.create(user_id: doug.id, ballpark_id: ballpark.id, overall_experience: 0, concession_rating: 0, beauty_rating: 0, overall_price_rating: 0, crowd_rating: 0, comments: "You have not rated #{ballpark.name} yet!! Get moving!", visited: false, wishlist: false)
 
 end
 Ballpark.all.each do |ballpark| 
-    UserBallpark.create(user_id: max.id, ballpark_id: ballpark.id, overall_experience: 0, concession_rating: 0, beauty_rating: 0, overall_price_rating: 0, crowd_rating: 0, comments: "You have not rated #{ballpark.name} yet!! Get moving!", visited: false, wishlist: true)
+    UserBallpark.create(user_id: max.id, ballpark_id: ballpark.id, overall_experience: 0, concession_rating: 0, beauty_rating: 0, overall_price_rating: 0, crowd_rating: 0, comments: "You have not rated #{ballpark.name} yet!! Get moving!", visited: false, wishlist: false)
 end
 
 
